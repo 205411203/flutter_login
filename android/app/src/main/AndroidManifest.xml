@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.login_205411203">
+    package="com.example.flutter_login">
    <application
-        android:label="login_205411203"
+        android:label="flutter_login"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

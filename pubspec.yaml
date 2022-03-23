@@ -1,5 +1,5 @@
-name: login_205411203
-description: Login 205411203
+name: flutter_login
+description: Login with Firebase and Crud Firestore
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -34,6 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  firebase_core: ^1.13.1
+  cloud_firestore: ^3.1.10
+  emoji_picker_flutter: ^1.0.7
+  firebase_auth: ^3.2.0
+  flutter_keyboard_visibility: ^5.1.0
+  fluttericon: ^2.0.0
+  google_fonts: ^2.1.0
+  intl: ^0.17.0
+  path_provider: ^2.0.9
+  page_transition: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -44,7 +54,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
+  flutter_lints: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,9 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'homepage.dart';
+import 'models/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]).then((_)=> runApp(MyApp()));
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -12,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginDemo(),
+      home: const LoginScreen(),
     );
   }
 }
@@ -24,6 +31,33 @@ class LoginDemo extends StatefulWidget {
 }
 
 class _LoginDemoState extends State<LoginDemo> {
+  // add variable login
+  late String password;
+  late String email;
+
+  // final _firestore = Firestore.
+  final _auth = FirebaseAuth.instance;
+  bool _obscureText = true;
+  bool _validate = false;
+  final _text1 = TextEditingController();
+  final _text2 = TextEditingController();
+
+
+  @override
+  void dispose() {
+    _text1.dispose();
+    _text2.dispose();
+    // _text3.dispose();
+    super.dispose();
+  }
+
+  void _toggle(){
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

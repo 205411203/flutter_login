@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(login_205411203 LANGUAGES CXX)
+project(flutter_login LANGUAGES CXX)
 
-set(BINARY_NAME "login_205411203")
+set(BINARY_NAME "flutter_login")
 
 cmake_policy(SET CMP0063 NEW)
 

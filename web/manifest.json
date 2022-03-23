@@ -1,6 +1,6 @@
 {
-    "name": "login_205411203",
-    "short_name": "login_205411203",
+    "name": "flutter_login",
+    "short_name": "flutter_login",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
